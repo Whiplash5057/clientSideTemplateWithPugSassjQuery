@@ -1,0 +1,1 @@
+global.jQuery=require("jquery");var sayHello=require("./say_hello");sayHello(),$(function(){console.log("testing jquery")});

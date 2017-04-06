@@ -1,0 +1,33 @@
+{
+  "name": "cssanimations",
+  "version": "1.0.0",
+  "description": "Title: \"Learn CSS animations with the help of devtips using gulp, JADE(pug) and SASS. Also learning markdown in the process.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Whiplash5057/DevTipsCssAnimations.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Whiplash5057/DevTipsCssAnimations/issues"
+  },
+  "homepage": "https://github.com/Whiplash5057/DevTipsCssAnimations#readme",
+  "devDependencies": {
+    "browserify": "^14.3.0",
+    "gulp": "^3.9.1",
+    "gulp-jquery": "^1.1.2",
+    "gulp-more-css": "^1.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify": "^2.1.2",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}

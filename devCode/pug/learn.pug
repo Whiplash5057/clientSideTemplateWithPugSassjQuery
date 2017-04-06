@@ -1,0 +1,108 @@
+//Learning PUG/JADE
+  remember to put . whenever writing text inside a block because if the text contains any html tags it would render it as html.
+  You cannot have a javascript variable in a href or any other attribute example a(href = "#{myLink}")
+  This is how you would do it   a(href = myLink)
+  
+  if you want to store tags inside a variable and then assing them to another tag you can do that. But for encoding reasons you would have to add !
+  examle : -someInfo = "<i> Very Interesting </i>"
+  p!= someInfo
+  p !{someInfo}
+  
+  if ((abc >13) && (abc < 234))
+    h3 you do This
+  else if(abc = 34245)
+    h2 you do This
+  else
+    h4 you do This
+    
+    
+  case name
+    when "Sally"
+      This is Sally
+    when "Richard"
+      This is Richard
+    default
+      This is nobody
+      
+  script.
+    console.log("Testing jade")
+      
+      
+  - qbs = ['value1', 'value2', 'value3', value4]
+  
+  ul
+    for(i = 0; i < qbs.length; i++)
+      li = qbs[i]
+      
+  ul
+    each qb in qbs
+      li = qb
+      
+  - i = 0
+  ul
+    while i <= 20
+      li = i
+       - i++
+       
+   mixin nflPlayer(name, player, team)
+    li #{name} plays in #{player} for #{team}
+  
+  ul#nflPlayers
+    +nflPlayer("Tom Brady", "Quarterback", "patriots")
+    +nflPlayer("Tom Brady", "Quarterback", "patriots")
+    +nflPlayer("Tom Brady", "Quarterback", "patriots")
+    
+  mixin copyr
+    | &#169;
+  
+  p
+    +copyr
+    | 2017
+   
+  
+doctype
+html
+
+  include ./head.pug
+
+  body
+    div(class = "conainer first_div",
+    id = "first_id")
+      p.
+        <i> Testing JADE/PUG </i>
+
+      .innerContainer#testingId.
+        text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+
+      ul
+        li#listItem
+          a(href = "#") first list item
+        li#listItem
+          a(href = "#") first list item
+
+      ul
+        li#heroNo1: a(href = "#") Batman
+        li#heroNo2: a(href = "#") Superman
+        li#heroNo3: a(href = "#") Flash
+
+  - myName = "Richard"
+  - myLink = "http://theblackaristocrat.esy.es/"
+  - heroArray = ['batman', 'Wonder women', 'batgirl', 'superman']
+  
+  p Hello #{myName}
+  
+  p 2345*2345 = #{2345*2345}
+  
+  a(href = myLink).
+      my link is #{myLink}
+
+  ul
+    li#heroNo1: a(href = "#") #{heroArray[0]}
+    li#heroNo2: a(href = "#") #{heroArray[1]}
+    li#heroNo3: a(href = "#") #{heroArray[2]}
+
+
+  - fnI = {"type" : "text", name = "fName"}
+  
+  span first name
+  input(type = fnI.type, name = fnI.name)
